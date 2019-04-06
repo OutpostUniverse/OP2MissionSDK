@@ -12,7 +12,7 @@ The following submodules are included:
 ## Change log:
 Follows semantic versioning: https://semver.org/
 
-### Version 2.0.0
+### Version 4.0.0
 This release is a rollup of minor changes to the 3 subprojects. Contains breaking changes by removing deprecated functionality. If deprecated features are not in use, should be a drop-in upgrade. The macro `ExportLevelDetailsEx` in Outpost2DLL is now considered deprecated and should be replaced in new projects.
 
 ##### Outpost2DLL
@@ -43,5 +43,5 @@ This release is a rollup of minor changes to the 3 subprojects. Contains breakin
  - Simplify Visual Studio project configuration settings
 
  
-### Version 1.0.0
- - Initial Release
+### Version 1.0.0 to 3.0.0
+ - Maintained in subversion (SVN) repository. Search the forums at https://forum.outpost2.net/ for details.
