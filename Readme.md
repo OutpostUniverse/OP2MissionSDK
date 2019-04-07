@@ -72,6 +72,7 @@ Version 3.5.0 is a collection of changes made from 2015 until the SDK was ported
  - Allow specifying player number for function CreateNoCommandCenterFailureCondition
  - Remove reference semantics from functions CreateLastOneStandingVictoryCondition & CreateNoCommandCenterFailureCondition
  - Correct spelling and grammatical mistakes in code comments
+ - Refactor functions to use modern C++ coding practices
 
 ##### HFL
  - Use safe versions of c-style string functions
