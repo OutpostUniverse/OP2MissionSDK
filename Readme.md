@@ -48,6 +48,7 @@ This release is a rollup of minor changes to the 3 subprojects. Contains breakin
 Version 3.5.0 is a collection of changes made from 2015 until the SDK was ported to Git. These changes were never officially packaged and released.
 
 ##### Outpost2DLL
+ - Add Outpost2App headers
  - Remove LibCTiny.lib
  - Add macros to ease mission save region actions (ExportSaveLoadData and ExportSaveLoadDataNone)
    - Allows auto generation of the GetSaveRegions function for a given global variable name
