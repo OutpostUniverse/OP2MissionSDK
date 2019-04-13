@@ -38,6 +38,7 @@ This release is a rollup of minor changes to the 3 subprojects. Contains breakin
    - Hides const conversion warnings created by TethysGame::AddMessage when using stricter compiler settings
  - Add global operator overloads for LOCATION== and LOCATION!=
  - Simplify Visual Studio project settings
+ - Remove BaseBuilderV2
  
 ##### HFL
  - Fix incorrectly formatted include guard in TriggerEx.h
