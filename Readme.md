@@ -33,10 +33,13 @@ This release is a rollup of minor changes to the 3 subprojects. Contains breakin
  - Add dummy file Outpost2DLL.cpp to allow compiling Outpost2DLL standalone (running compiler checks)
  
 ##### OP2Helper
+ - Ease recording tube and wall lines to building groups
+ - Deprecate CreateTubeOrWallLine function
+   - Replace with instance functions CreateTubeLine, CreateWallLine, CreateLavaWallLine, and CreateMicrobeWallLine
  - New AddGameMessage function family
    - Simplifies calls to add messages compared to TethysGame::AddMessage
    - Hides const conversion warnings created by TethysGame::AddMessage when using stricter compiler settings
- - Add global operator overloads for LOCATION== and LOCATION!=
+ - Add global operator overloads for LOCATION==, LOCATION!=, LOCATION+=, and LOCATION-=
  - Simplify Visual Studio project settings
  - Remove BaseBuilderV2
  
