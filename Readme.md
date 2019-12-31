@@ -12,6 +12,28 @@ The following submodules are included:
 ## Change log:
 Follows semantic versioning: https://semver.org/
 
+### Version 4.1.0
+Version 4.1.0 focuses on focuses on improved library internal implementation and C++ standards compliance. A few minor enhancements are made in OP2Helper including a BuildingBays enum. the constant AllPlayers in Outpost2DLL is now deprecated and should be replaced by PlayerNum::PlayerAll. Targeting a specific version of the Windows SDK was removed from all three major libraries. 
+
+#### Outpost2DLL
+ - Bug: Fix documentation of RecordVehReinforceGroup to prevent a hanging bug within Outpost2.exe
+ - Add a readme
+ - Deprecate AllPlayers constant (Use PlayerNum::PlayerAll instead)
+ - Improve C++ standards compliance and readability of source code
+ - Clearly forward declare dependence on DirectX IDirectDraw
+ - Improve comments on UnitClassifications enum and typedef
+ - Improve implementation of internal headers
+
+#### OP2Helper
+ - Add a readme
+ - Add function CenterViewOn
+ - Represent building bays as an enum
+
+#### HFL
+ - Improve Readme
+ - Improve example level code to prevent save/load bug and use modern features of Outpost2DLL
+ - Improve C++ standards compliance and readbility of source code
+ - Remove excessive internal casting
 
 ### Version 4.0.0
 This release is a rollup of minor changes to the 3 subprojects. Contains breaking changes by removing deprecated functionality. If deprecated features are not in use, should be a drop-in upgrade. The macro `ExportLevelDetailsEx` in Outpost2DLL is now considered deprecated and should be replaced in new projects.
