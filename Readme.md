@@ -32,7 +32,7 @@ Version 4.1.0 focuses on improved library internal implementation and C++ standa
 #### HFL
  - Improve Readme
  - Improve example level code to prevent save/load bug and use modern features of Outpost2DLL
- - Improve C++ standards compliance and readbility of source code
+ - Improve C++ standards compliance and readability of source code
  - Remove excessive internal casting
 
 ### Version 4.0.0
