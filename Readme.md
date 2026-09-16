@@ -8,12 +8,33 @@ The following submodules are included:
  - OP2Helper
  - Hacker's Function Library (HFL)
  - odasl: Outpost 2 themed dialog skinning
- 
+
 ## Change log:
 Follows semantic versioning: https://semver.org/
 
+### Version 5.0.0
+Version 5.0.0 updates OP2MissionSDK to default to Visual Studio 2026 and its toolset (v145). A new feature in HFL and some minor documentation corrections are included. Automated server builds were updated to use GitHub actions instead of appveyor. A breaking change occurred in OP2Helper correcting the name of an enum ID.
+
+#### Outpost2DLL
+ - Update to Visual Studio 2026 build tools (v145)
+ - Automated build switched from appveyor to GitHub actions
+ - Minor updates to source code documentation
+
+#### OP2Helper
+ - Update to Visual Studio 2026 build tools (v145)
+ - Automated build switched from appveyor to GitHub actions
+ - Correct EnumTechID enum identifier spelling of defensive (Breaking Change to API)
+ - Correct common metals evacuation victory message text
+ - Create helper functions to ease creation of map beacons (common ore, rare ore, fumaroles, and magma vents)
+ - Minor updates to source code documentation
+
+#### HFL
+ - Add DoCargoRoute routine
+ - Update to Visual Studio 2026 build tools (v145)
+ - Minor updates to source code documentation
+
 ### Version 4.1.0
-Version 4.1.0 focuses on improved library internal implementation and C++ standards compliance. A few minor enhancements are made in OP2Helper including a BuildingBays enum. the constant AllPlayers in Outpost2DLL is now deprecated and should be replaced by PlayerNum::PlayerAll. Targeting a specific version of the Windows SDK was removed from all three major libraries. 
+Version 4.1.0 focuses on improved library internal implementation and C++ standards compliance. A few minor enhancements are made in OP2Helper including a BuildingBays enum. The constant AllPlayers in Outpost2DLL is now deprecated and should be replaced by PlayerNum::PlayerAll. Targeting a specific version of the Windows SDK was removed from all three major libraries. 
 
 #### Outpost2DLL
  - Bug: Fix documentation of RecordVehReinforceGroup to prevent a hanging bug within Outpost2.exe
@@ -25,6 +46,7 @@ Version 4.1.0 focuses on improved library internal implementation and C++ standa
  - Improve implementation of internal headers
 
 #### OP2Helper
+
  - Add a readme
  - Add function CenterViewOn
  - Represent building bays as an enum
@@ -38,7 +60,7 @@ Version 4.1.0 focuses on improved library internal implementation and C++ standa
 ### Version 4.0.0
 This release is a rollup of minor changes to the 3 subprojects. Contains breaking changes by removing deprecated functionality. If deprecated features are not in use, should be a drop-in upgrade. The macro `ExportLevelDetailsEx` in Outpost2DLL is now considered deprecated and should be replaced in new projects.
 
-##### Outpost2DLL
+#### Outpost2DLL
  - Add comments to TethysGame::AddMessage explaining location agnostic messages work
    - Recommend using OP2Helper AddGameMessage family instead of TethysGame::AddMessage
  - Improve comments and argument names when using function SetEMPMissile
@@ -53,8 +75,8 @@ This release is a rollup of minor changes to the 3 subprojects. Contains breakin
    - If previously using the macro SCRIPT_API, the macro Export is a drop-in replacement
  - Mark exported data in RequiredExports.h as const
  - Add dummy file Outpost2DLL.cpp to allow compiling Outpost2DLL standalone (running compiler checks)
- 
-##### OP2Helper
+
+#### OP2Helper
  - Ease recording tube and wall lines to building groups
  - Deprecate CreateTubeOrWallLine function
    - Replace with instance functions CreateTubeLine, CreateWallLine, CreateLavaWallLine, and CreateMicrobeWallLine
@@ -64,16 +86,16 @@ This release is a rollup of minor changes to the 3 subprojects. Contains breakin
  - Add global operator overloads for LOCATION==, LOCATION!=, LOCATION+=, and LOCATION-=
  - Simplify Visual Studio project settings
  - Remove BaseBuilderV2
- 
-##### HFL
+
+#### HFL
  - Fix incorrectly formatted include guard in TriggerEx.h
  - Simplify Visual Studio project configuration settings
-
 
 ### Version 3.5.0
 Version 3.5.0 is a collection of changes made from 2015 until the SDK was ported to Git. These changes were never officially packaged and released.
 
-##### Outpost2DLL
+#### Outpost2DLL
+
  - Add Outpost2App headers
  - Remove LibCTiny.lib
  - Add macros to ease mission save region actions (ExportSaveLoadData and ExportSaveLoadDataNone)
@@ -84,8 +106,8 @@ Version 3.5.0 is a collection of changes made from 2015 until the SDK was ported
  - Change access to ScStub::stubIndex from private to public
    - While this field would normally be private for object oriented encapsulation, making it public allows for easier hacks that require the contained value
  - Fix typos in code comments
- 
-##### OP2Helper
+
+#### OP2Helper
  - Add LOCATION global operator overloads for + and -
  - Add Bulldozer.h/.cpp
    - Simplifies bulldozing terrain during mission initialization
@@ -93,7 +115,7 @@ Version 3.5.0 is a collection of changes made from 2015 until the SDK was ported
  - Update Lava.h/.cpp
    - Eases setting volcano flow animation on active volcanoes 
    - Eases setting tiles as lava possible
-   - This causes function name collisions in some older, existing scenario projects. The functions in lava.h should be drop in replacements for these scenarios.
+   - This causes function name collisions in some older, existing scenario projects. The functions in lava.h should be drop-in replacements for these scenarios.
  - Add CenterViewOnPlayerCC (ZigZagJoe)
    - This function existed since approximately 2009, but was not merged into the master OP2Helper branch
  - Allow specifying player number for function CreateNoCommandCenterFailureCondition
@@ -101,9 +123,9 @@ Version 3.5.0 is a collection of changes made from 2015 until the SDK was ported
  - Correct spelling and grammatical mistakes in code comments
  - Refactor functions to use modern C++ coding practices
 
-##### HFL
+#### HFL
  - Use safe versions of c-style string functions
- - Add hex values to CommandType enum for easier human reference 
- 
+ - Add hex values to CommandType enum for easier human reference
+
 ### Version 1.0.0 to 3.0.0
  - Maintained in subversion (SVN) repository. Search the forums at https://forum.outpost2.net/ for details.
