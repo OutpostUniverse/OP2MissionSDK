@@ -9,6 +9,8 @@ The following submodules are included:
  - Hacker's Function Library (HFL)
  - odasl: Outpost 2 themed dialog skinning
 
+In addition to the above libraries, TethysAPI is a C++17 library providing access to Outpost 2's public API as well as its internal functions and data, which can be used to create custom missions and mods for the game. The library is not yet fully mature and not included by default in OP2MissionSDK but may be used alongside the traditional OP2MissionSDK without issue. The library can be found here: [TethysAPI](https://github.com/OutpostUniverse/TethysAPI).
+
 ## Change log:
 Follows semantic versioning: https://semver.org/
 
@@ -46,7 +48,6 @@ Version 4.1.0 focuses on improved library internal implementation and C++ standa
  - Improve implementation of internal headers
 
 #### OP2Helper
-
  - Add a readme
  - Add function CenterViewOn
  - Represent building bays as an enum
@@ -95,7 +96,6 @@ This release is a rollup of minor changes to the 3 subprojects. Contains breakin
 Version 3.5.0 is a collection of changes made from 2015 until the SDK was ported to Git. These changes were never officially packaged and released.
 
 #### Outpost2DLL
-
  - Add Outpost2App headers
  - Remove LibCTiny.lib
  - Add macros to ease mission save region actions (ExportSaveLoadData and ExportSaveLoadDataNone)
